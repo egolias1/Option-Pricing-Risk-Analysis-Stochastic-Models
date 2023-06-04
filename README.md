@@ -15,3 +15,18 @@ This project is organized as follows:
 - `sensitivity_analysis/`: Includes scripts for performing sensitivity analysis on model parameters and market conditions.
 - `results/`: Stores the generated outputs, including option prices, risk metrics, and visualizations.
 - `docs/` : Contains the project documentation, including the report summarizing the project objectives, mothodologies, and findings.
+
+## Dependencies
+This project has the following dependencies:
+
+- Python 3.6
+- NumPy
+- Pandas
+- Matplotlib
+
+## Usage
+
+## License
+This project is licensed under the [MIT License](LICENSE)
+
+## Aknowledgements
