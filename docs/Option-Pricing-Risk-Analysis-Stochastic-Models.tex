@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+%\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
              % images in pdf, png or jpg format)
 
 \usepackage{jheppub} % for details on the use of the package, please
@@ -59,93 +59,16 @@ model implementation, and advanced quantitative techniques.}
 \maketitle
 \flushbottom
 
-\section{Some examples and best-practices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data Collection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{sec:intro}
 
-For internal references use label-refs: see section~\ref{sec:intro}.
-Bibliographic citations can be done with cite: refs.~\cite{a,b,c}.
-When possible, align equations on the equal sign. The package
-\texttt{amsmath} is already loaded. See \eqref{eq:x}.
-\begin{equation}
-\label{eq:x}
-\begin{split}
-x &= 1 \,,
-\qquad
-y = 2 \,,
-\\
-z &= 3 \,.
-\end{split}
-\end{equation}
-Also, watch out for the punctuation at the end of the equations.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data Preprocessing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-If you want some equations without the tag (number), please use the available
-starred-environments. For example:
-\begin{equation*}
-x = 1
-\end{equation*}
-
-The amsmath package has many features. For example, you can use use
-\texttt{subequations} environment:
-\begin{subequations}\label{eq:y}
-\begin{align}
-\label{eq:y:1}
-a & = 1
-\\
-\label{eq:y:2}
-b & = 2
-\end{align}
-and it will continue to operate across the text also.
-\begin{equation}
-\label{eq:y:3}
-c = 3
-\end{equation}
-\end{subequations}
-The references will work as you'd expect: \eqref{eq:y:1},
-\eqref{eq:y:2} and \eqref{eq:y:3} are all part of \eqref{eq:y}.
-
-A similar solution is available for figures via the \texttt{subfigure}
-package (not loaded by default and not shown here). 
-All figures and tables should be referenced in the text and should be
-placed at the top of the page where they are first cited or in
-subsequent pages. Positioning them in the source file
-after the paragraph where you first reference them usually yield good
-results. See figure~\ref{fig:i} and table~\ref{tab:i}.
-
-\begin{figure}[tbp]
-\centering % \begin{center}/\end{center} takes some additional vertical space
-\includegraphics[width=.45\textwidth,trim=0 380 0 200,clip]{img1.pdf}
-\hfill
-\includegraphics[width=.45\textwidth,origin=c,angle=180]{img2.pdf}
-% "\includegraphics" is very powerful; the graphicx package is already loaded
-\caption{\label{fig:i} Always give a caption.}
-\end{figure}
-
-\begin{table}[tbp]
-\centering
-\begin{tabular}{|lr|c|}
-\hline
-x&y&x and y\\
-\hline 
-a & b & a and b\\
-1 & 2 & 1 and 2\\
-$\alpha$ & $\beta$ & $\alpha$ and $\beta$\\
-\hline
-\end{tabular}
-\caption{\label{tab:i} We prefer to have borders around the tables.}
-\end{table}
-
-We discourage the use of inline figures (wrapfigure), as they may be
-difficult to position if the page layout changes.
-
-We suggest not to abbreviate: ``section'', ``appendix'', ``figure''
-and ``table'', but ``eq.'' and ``ref.'' are welcome. Also, please do
-not use \texttt{\textbackslash emph} or \texttt{\textbackslash it} for
-latin abbreviaitons: i.e., et al., e.g., vs., etc.
-
-
-
-\section{Sections}
 \subsection{And subsequent}
 \subsubsection{Sub-sections}
 \paragraph{Up to paragraphs.} We find that having more levels usually
@@ -155,7 +78,29 @@ use of non-numbered sections (e.g.~\texttt{\textbackslash
 ``\texttt{\textbackslash texorpdfstring\{\}\{\}}'' to avoid warnings
 from the hyperref package when you have math in the section titles
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Stochastic Model Selection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Black-Scholes-Merton Model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For a European Call Option, the theoretical price $C$ of the option is given by
+
+\begin{align}
+  C = S_t N(d_1) - X e^{-r T} N(d_2)
+\end{align}
+
+where $S$ is the current price of the underlying asset, $X$ is the strike price of the option,
+$r$ is the risk-free interest rate, $T$ is the time to expiration in years,
+$N(x)$ is the cumulative standard normal distribution function, and 
+
+\begin{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Heston Model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
 \section{Some title}
